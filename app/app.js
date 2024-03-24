@@ -11,6 +11,7 @@ const home = require("./src/routes/home"); // 만든 자바스크립트 파일�
 // 앱 세팅
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
+app.use(express.static(`${__dirname}/src/public`))
 
 app.get('/', function(req, res){
     res.send("Hello World!");
