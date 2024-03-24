@@ -6,10 +6,10 @@ const db =require('./db/db')
 
 
 // 라우팅
-const home = require("./routes/home"); // 만든 자바스크립트 파일을 require해서 부르는것 / 폴더를 상대적으로 명시 
+const home = require("./src/routes/home"); // 만든 자바스크립트 파일을 require해서 부르는것 / 폴더를 상대적으로 명시 
 
 // 앱 세팅
-app.set("views", "./views");
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 app.get('/', function(req, res){
