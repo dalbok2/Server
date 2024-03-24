@@ -26,5 +26,8 @@ const id = document.querySelector("#id"),  //질의 선택자 (login.ejs에 있�
             } else {
                 alert(res.msg);
             }
-        });  // req 데이터를 JSON 형태로 감싸주어야함, stringify : 단순히 오브젝트를 문자열로
+        })  // req 데이터를 JSON 형태로 감싸주어야함, stringify : 단순히 오브젝트를 문자열로
+        .catch((err) => {
+            console.error(new Error("로그인 중 에러 발생"));
+        });
     }
