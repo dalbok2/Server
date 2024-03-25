@@ -1,9 +1,12 @@
 // 모듈
 const express = require('express');
 const bodyParser = require("body-parser");
+const dotenv = require ("dotenv"); // 어떤 os에서 개발하더라도 동일하게 환경변수를 등록하고 가져올 수 있음 
+dotenv.config();
 const cors = require('cors');
+
 const app = express();
-const db =require('./db/db')
+// const db =require('./src/config/db')
 
 
 // 라우팅
@@ -19,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/', function(req, res){
-    res.send("Hello World!");
+    res.send("로그인 되었습니다.");
 });
 
 app.use("/", home); // use -> 미들 웨어를 등록해주는 메서드
